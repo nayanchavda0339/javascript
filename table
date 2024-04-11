@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table align="center" border="1" width="100%" cellpadding="10">
+            <th style="font-size: 50px;"><b><u><i>Multiplication Table from 1 to 5</i></u></b></th>
+        <tr>
+            <td style="font-size: 30px;">
+                <table style="background-color: rgb(217, 176, 114);" border="1" id="table1" width="100%"></table>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table align="center" border="1" width="100%" cellpadding="10">
+        <th style="font-size: 50px;"><b><u><i>Multiplication Table from 6 to 10</i></u></b></th>
+        <tr>
+            <td style="font-size: 30px;">
+                <table align="center" style="background-color: rgb(139, 242, 168);" border="1" id="table2" width="100%"></table>
+            </td>
+        </tr>
+    </table>
+    
+    <script>
+        const table1 = document.getElementById("table1");
+        const table2 = document.getElementById("table2");
+
+        let content1 = "";
+        let content2 = "";
+
+        // Multiplication Table from 1 to 5
+        for (let a = 1; a <= 10; a++) {
+            content1 += `<tr>`;
+            for (let b = 1; b <= 5; b++) {
+                content1 += `<td>${b} * ${a} = ${a * b}</td>`; // Multiplication result
+            }
+            content1 += `</tr>`;
+        }
+        table1.innerHTML = content1;
+
+        // Multiplication Table from 6 to 10
+        for (let a = 1; a <= 10; a++) {
+            content2 += `<tr>`;
+            for (let b = 6; b <= 10; b++) {
+                content2 += `<td>${b} * ${a} = ${a * b}</td>`; // Multiplication result
+            }
+            content2 += `</tr>`;
+        }
+        table2.innerHTML = content2;
+    </script>
+</body>
+</html>
